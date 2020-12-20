@@ -1,0 +1,11 @@
+{%extends "base.html"%}
+{%block title%}Блог{%endblock%}
+{%block body%}
+
+  {%for i in articles%}
+    <a href="{{url_for('detile', slug = i.slug)}}">{{i.title | striptags}}</a>
+    <br>
+
+  {%endfor%}
+
+{%endblock%}
